@@ -20,9 +20,9 @@ class RLabel
 		@manufacturer=name
 	end
 
-	def manufacturer
-		@labels.
-	end
+#	def manufacturer
+#		@labels.
+#	end
 	
 	def model(name)
 		raise "The manufacturer is not set" unless @manufacturer
@@ -127,5 +127,3 @@ private
 		p rg.output		
 	end
 end
-
-

@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
 #require 'spec/rake/spectask'
  
 GEM = "rlabel"
-GEM_VERSION = "0.2.0"
+GEM_VERSION = "0.4.0"
 SUMMARY = "Criar Etiquetas em PDF"
 AUTHOR = "Gustavo Lichti"
 EMAIL = "gustavo@lichti.eti.br"

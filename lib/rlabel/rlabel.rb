@@ -133,7 +133,7 @@ private
 		end
 		
 		rg=report.render :pdf, :filename => "#{name}" if renderMode==:normal
-		report.render_stream(:pdf), :filename => "#{name}" if renderMode==:stream
+		report.render_stream :pdf, :filename => "#{name}" if renderMode==:stream
 		#p rg.output
 	end
 end

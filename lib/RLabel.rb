@@ -8,4 +8,4 @@ module Rlabel
 end
 
 require "rlabel/rlabel.rb"
-#
+

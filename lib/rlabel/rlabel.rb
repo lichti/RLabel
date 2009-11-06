@@ -42,11 +42,19 @@ class RLabel
 	end
 	
 	def save(name)
-		render(name)
+		render(name,:original,:normal)
 	end
 
 	def saveDraft(name)
-		render(name,:draft)
+		render(name,:draft,:normal)
+	end
+
+	def stream(name)
+		render(name,:original,:stream)
+	end
+
+	def streamDraft(name)
+		render(name,:draft,:stream)
 	end
 
 private
@@ -100,7 +108,7 @@ private
 		@paper_types[:letter] = {:width => 21.6, :height=> 27.9}
 	end
 	
-	def render(name='label.pdf',mode=:original)
+	def render(name='rlabel.pdf',mode=:original,renderMode=:normal)
 		raise "The format of the label was not set" unless @model
 		icol=0
 		irow=0
@@ -123,7 +131,9 @@ private
 			report.call :next_page if irow==@labels[@manufacturer][@model][:rows] and data < @data.size-1
 			irow=0 if irow==@labels[@manufacturer][@model][:rows]
 		end
-		rg=report.render :pdf, :filename => "#{name}"
-		p rg.output		
+		
+		rg=report.render :pdf, :filename => "#{name}" if renderMode==:normal
+		report.render_stream(:pdf), :filename => "#{name}" if renderMode==:stream
+		#p rg.output
 	end
 end

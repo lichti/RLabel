@@ -5,6 +5,11 @@ O básico já estafuncionando e já tem varias funcionalidades em desenvolviment
 
 The RLabel already supports all types of labels PIMACO letter size
 The base is already working and already have several features in development
+
+h2. Dependency
+
+A RLabel depende da gem RGhost para gerar o PDF
+The RGhost gem is required to generate the PDF
  
 h2. Examples
  

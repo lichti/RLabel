@@ -1,0 +1,28 @@
+h2. RLabel
+A RLabel já suporta todos os modelos de etiquetas da pimaco de tamanho Carta
+O básico já estafuncionando e já tem varias funcionalidades em desenvolvimento
+
+h2. Examples
+
+@rl=RLabel.new
+@rl.manufacturer(:pimaco)
+@rl.model(:P6081)	
+@rl.addLabel(['Line 1','Line 2','Line 3','Line N'])
+@rl.save('Pimaco-6081.pdf')
+
+h3. Draft
+
+@rl=RLabel.new
+@rl.manufacturer(:pimaco)
+@rl.model(:P6081)	
+@rl.addLabel(['Line 1','Line 2','Line 3','Line N'])
+@rl.saveDraft('Pimaco-6081.pdf')
+
+h3. Stream (Use with Rails)
+
+@rl=RLabel.new
+@rl.manufacturer(:pimaco)
+@rl.model(:P6081)	
+@rl.addLabel(['Line 1','Line 2','Line 3','Line N'])
+@rl.stream('Pimaco-6081.pdf')
+

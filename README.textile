@@ -1,6 +1,10 @@
 h2. RLabel
+
 A RLabel já suporta todos os modelos de etiquetas da pimaco de tamanho Carta
 O básico já estafuncionando e já tem varias funcionalidades em desenvolvimento
+
+The RLabel already supports all types of labels PIMACO letter size
+The base is already working and already have several features in development
  
 h2. Examples
  
